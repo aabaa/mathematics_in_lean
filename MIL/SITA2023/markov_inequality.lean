@@ -4,14 +4,6 @@ import Mathlib.Data.Real.Basic
 import Mathlib.Algebra.BigOperators.Basic
 open Classical Finset Nat BigOperators
 
-/--
-import Mathlib.BigOperators.BigOperators
-import algebra.big_operators.finprod
-import algebra.big_operators.ring
-import set_theory.lists
-open_locale big_operators
---/
-
 theorem p_and_q_implies_q_or_p (p q : Prop)(h : p ∧ q) :
   p ∧ q → q ∨ p := by
   simp [h]
