@@ -175,7 +175,7 @@ lemma prob_inquality_0 {Ω : Finset ℕ}{P X : ℕ → ℝ}{a : ℝ}
 /--
   任意の非負関数 f, g に対して，f(x) ≥ g(x) ならば Σ f(x) ≥ Σ g(x) となることを示す．
 -/
-lemma sum_fun_inequality {Ω : Finset ℕ}{f g : ℕ → ℝ}{a : ℝ}
+lemma sum_fun_inequality {Ω : Finset ℕ}{f g : ℕ → ℝ}
   (hfg: ∀ x, f x ≥ g x) :
   (∑ ω in Ω, f ω) ≥ (∑ ω in Ω, g ω) := by
   induction Ω using Finset.induction_on with
@@ -201,7 +201,7 @@ lemma prob_inquality_1 {Ω : Finset ℕ}{P X : ℕ → ℝ}{a : ℝ}
     let x := P ω
     let y := X ω
     apply ite_mul_inequality a x y hP'
-  apply @sum_fun_inequality Ω f g a h1
+  apply @sum_fun_inequality Ω f g h1
 
 /--
   Σ a * f(ω) = a * Σ f(ω) となることを示す．
