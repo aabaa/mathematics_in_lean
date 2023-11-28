@@ -1,8 +1,6 @@
-import Mathlib.Data.Set.Finite
-import Mathlib.Logic.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Algebra.BigOperators.Basic
-open Classical Finset Nat BigOperators
+open Classical BigOperators
 
 theorem p_and_q_implies_q_or_p (p q : Prop)(h : p ∧ q) :
   p ∧ q → q ∨ p := by
